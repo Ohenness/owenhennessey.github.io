@@ -55,6 +55,8 @@
         .experience-company { color: #aaa; font-size: 0.95rem; margin-bottom: 0.4rem; }
         .experience-item ul { margin-left: 1.2rem; color: #ccc; }
         .experience-item li { margin-bottom: 0.3rem; }
+        .project-header { font-weight: 600; color: #B0E4CC; margin-top: 1rem; margin-bottom: 0.3rem; font-size: 0.95rem; }
+        .project-header:first-of-type { margin-top: 0.5rem; }
         .skills { display: flex; flex-wrap: wrap; gap: 0.5rem; }
         .skill {
             background: rgba(176,228,204,0.1);
@@ -111,12 +113,40 @@
                     <span class="experience-title">Software Development Engineer</span>
                     <span class="experience-date">June 2024 – Present</span>
                 </div>
-                <div class="experience-company">Amazon Web Services — PrivateLink, VPC Endpoints</div>
+                <div class="experience-company">Amazon Web Services — VPC Endpoints (PrivateLink)</div>
+                <p style="margin-top: 0.5rem; color: #ccc;">Own end-to-end development of the VPC Endpoints control plane — the service that enables millions of customers to privately connect to AWS services without exposing traffic to the public internet.</p>
+
+                <p class="project-header">Data Plane Migration</p>
                 <ul>
-                    <li>Own end-to-end development of the VPC Endpoints control plane and data plane migration systems spanning 50+ AWS regions</li>
-                    <li>Drove a stalled data plane migration from 84% to 98.1% completion (5M+ ENIs), delivering projected 90% infrastructure cost savings</li>
-                    <li>Reduced AWS service onboarding time from 6 weeks to under 1 week by architecting a self-service platform with reusable CDK constructs and automated canary testing</li>
-                    <li>Enabled 70+ internal AWS service teams to independently onboard with minimal support</li>
+                    <li>Drove a stalled infrastructure migration from 84% to 98.1% completion across 50+ AWS regions (5M+ network interfaces), delivering projected 90% infrastructure cost savings</li>
+                    <li>Built the orchestration platform from scratch: Step Functions workflows, DynamoDB locking for concurrency safety, cross-account dashboards, per-region dial-up controls, and automated rollback pipelines</li>
+                    <li>Deployed and operated the system across every AWS commercial and government region</li>
+                </ul>
+
+                <p class="project-header">Self-Service Onboarding Platform</p>
+                <ul>
+                    <li>Reduced internal AWS service onboarding time from 6 weeks to under 1 week by architecting a self-service platform with reusable infrastructure-as-code constructs and automated canary testing (IPv4/IPv6, TLS, policy validation)</li>
+                    <li>Enabled 70+ internal AWS service teams to independently onboard by building 3 reusable packages, 6 automated test scenarios, and comprehensive documentation for 4 architecture patterns</li>
+                </ul>
+
+                <p class="project-header">Organization-Level Access Controls</p>
+                <ul>
+                    <li>Implemented end-to-end support for customers to allowlist entire AWS Organizations instead of individual accounts — spanning API models, business logic, configuration, and validation</li>
+                </ul>
+
+                <p class="project-header">Metering & Billing Backfill</p>
+                <ul>
+                    <li>Designed and built a metering backfill system to ensure accurate billing records for millions of existing resources during a platform consolidation</li>
+                </ul>
+
+                <p class="project-header">New Internal Feature (Unreleased)</p>
+                <ul>
+                    <li>Contributing to an unreleased networking feature — implementing validation, idempotency enforcement, and connection management across the full API stack</li>
+                </ul>
+
+                <p class="project-header">Operational Excellence</p>
+                <ul>
+                    <li>Maintain production health across 50+ AWS regions: on-call ownership, JVM performance tuning, heap memory optimization, pipeline maintenance, and region build support for new AWS partitions</li>
                 </ul>
             </div>
             <div class="experience-item">
@@ -124,11 +154,13 @@
                     <span class="experience-title">Software Development Engineer Intern</span>
                     <span class="experience-date">May 2023 – July 2023</span>
                 </div>
-                <div class="experience-company">Amazon Web Services — Lambda, Counting Service</div>
+                <div class="experience-company">Amazon Web Services — Lambda</div>
+
+                <p class="project-header">Automated Performance Management System</p>
                 <ul>
-                    <li>Designed and built an automated heat management system eliminating 1–2 manual on-call pages per rotation for events exceeding 300K TPS</li>
-                    <li>Implemented a fail-safe orchestration pipeline with automated safety checks ensuring zero availability impact — ~5,700 lines of production code in 12 weeks</li>
-                    <li>Engineered an event-driven solution running every 30 minutes, transforming a reactive manual process into a fully automated system</li>
+                    <li>Designed and built an automated performance management system that eliminates 1–2 manual on-call pages per rotation by identifying, diagnosing, and resolving hot-host events exceeding 300K transactions per second</li>
+                    <li>Implemented a fail-safe orchestration pipeline with 3 automated safety checks (capacity math validation, active deployment detection, load balancer health verification) to ensure zero customer impact</li>
+                    <li>Delivered ~5,700 lines of production-ready code in 12 weeks, transforming a reactive manual investigation process into a fully automated system that runs every 30 minutes</li>
                 </ul>
             </div>
         </div>
