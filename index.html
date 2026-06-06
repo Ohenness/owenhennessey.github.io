@@ -6,41 +6,105 @@
     <title>Owen Hennessey</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #1a1a1a; line-height: 1.6; }
-        .container { max-width: 720px; margin: 0 auto; padding: 4rem 2rem; }
-        h1 { font-size: 2.2rem; margin-bottom: 0.25rem; }
-        .subtitle { color: #555; font-size: 1.1rem; margin-bottom: 2rem; }
-        section { margin-bottom: 2.5rem; }
-        h2 { font-size: 1.2rem; text-transform: uppercase; letter-spacing: 0.05em; color: #333; border-bottom: 2px solid #0073b1; padding-bottom: 0.3rem; margin-bottom: 1rem; }
-        p { margin-bottom: 1rem; color: #333; }
-        .skills { display: flex; flex-wrap: wrap; gap: 0.5rem; }
-        .skill { background: #f0f7fc; border: 1px solid #d0e5f5; border-radius: 4px; padding: 0.3rem 0.7rem; font-size: 0.9rem; }
-        .links a { display: inline-block; margin-right: 1.5rem; color: #0073b1; text-decoration: none; font-weight: 500; }
-        .links a:hover { text-decoration: underline; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            color: #1a1a1a;
+            line-height: 1.6;
+            background: #091413;
+            min-height: 100vh;
+        }
+        .header {
+            background: linear-gradient(135deg, #091413, #285A48);
+            padding: 3rem 2rem;
+            text-align: center;
+            color: #fff;
+        }
+        .header img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #B0E4CC;
+            margin-bottom: 1rem;
+        }
+        .header h1 { font-size: 2.2rem; margin-bottom: 0.25rem; }
+        .header .subtitle { font-size: 1.1rem; opacity: 0.95; }
+        .container { max-width: 900px; margin: -2rem auto 2rem; padding: 0 1.5rem; }
+        .card {
+            background: #285A48;
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+        }
+        .card h2 {
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #B0E4CC;
+            border-bottom: 2px solid #408A71;
+            padding-bottom: 0.4rem;
+            margin-bottom: 1.2rem;
+        }
+        p { margin-bottom: 1rem; color: #ccc; }
         .experience-item { margin-bottom: 1.5rem; }
         .experience-item:last-child { margin-bottom: 0; }
         .experience-header { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; }
-        .experience-title { font-weight: 600; font-size: 1rem; }
-        .experience-date { color: #666; font-size: 0.9rem; }
-        .experience-company { color: #555; font-size: 0.95rem; margin-bottom: 0.4rem; }
-        .experience-item ul { margin-left: 1.2rem; color: #333; }
+        .experience-title { font-weight: 600; font-size: 1rem; color: #eee; }
+        .experience-date { color: #999; font-size: 0.9rem; }
+        .experience-company { color: #aaa; font-size: 0.95rem; margin-bottom: 0.4rem; }
+        .experience-item ul { margin-left: 1.2rem; color: #ccc; }
         .experience-item li { margin-bottom: 0.3rem; }
-        footer { margin-top: 3rem; color: #888; font-size: 0.85rem; }
+        .skills { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+        .skill {
+            background: rgba(176,228,204,0.1);
+            border: 1px solid #408A71;
+            border-radius: 20px;
+            padding: 0.35rem 0.8rem;
+            font-size: 0.88rem;
+            font-weight: 500;
+            color: #B0E4CC;
+        }
+        .links a {
+            display: inline-block;
+            margin-right: 1.5rem;
+            color: #B0E4CC;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .links a:hover { text-decoration: underline; color: #408A71; }
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #666;
+            font-size: 0.85rem;
+        }
+        @media (max-width: 600px) {
+            .header { padding: 2rem 1rem; }
+            .header img { width: 110px; height: 110px; }
+            .header h1 { font-size: 1.7rem; }
+            .container { padding: 0 1rem; }
+            .card { padding: 1.5rem; }
+            .experience-header { flex-direction: column; }
+        }
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="header">
+        <img src="profile.jpg" alt="Owen Hennessey">
         <h1>Owen Hennessey</h1>
         <p class="subtitle">Software Development Engineer at Amazon Web Services</p>
+    </div>
 
-        <section>
+    <div class="container">
+        <div class="card">
             <h2>About</h2>
             <p>I'm a software development engineer at AWS, where I work on distributed systems, networking, and cloud infrastructure as part of the PrivateLink API team. I have 2 years of experience designing, developing, testing, and maintaining scalable software solutions in an agile environment.</p>
             <p>I graduated from The Ohio State University with a degree in Computer Science and Engineering. My background includes software engineering internships at AWS as well as leadership and performance experience through the Ohio State Marching Band and Men's Glee Club.</p>
             <p>I'm especially interested in building reliable, scalable systems that solve real customer problems and improve how teams operate. Outside of engineering, I enjoy staying active through swimming, running, and yoga, and I'm always looking for ways to keep learning, exploring, and growing both personally and professionally.</p>
-        </section>
+        </div>
 
-        <section>
+        <div class="card">
             <h2>Experience</h2>
             <div class="experience-item">
                 <div class="experience-header">
@@ -67,9 +131,9 @@
                     <li>Engineered an event-driven solution running every 30 minutes, transforming a reactive manual process into a fully automated system</li>
                 </ul>
             </div>
-        </section>
+        </div>
 
-        <section>
+        <div class="card">
             <h2>Education</h2>
             <div class="experience-item">
                 <div class="experience-header">
@@ -77,11 +141,11 @@
                     <span class="experience-date">2024</span>
                 </div>
                 <div class="experience-company">The Ohio State University — Columbus, Ohio</div>
-                <p style="margin-top: 0.6rem; color: #333;">Rigorous engineering program combining deep computer science theory with hands-on systems work. Coursework spanned algorithms and data structures, computer architecture, operating systems, networking, databases, software engineering, and artificial intelligence. Advanced study in machine learning, knowledge-based systems, and software requirements analysis — culminating in a capstone project building an AI-driven application from design through delivery.</p>
+                <p style="margin-top: 0.6rem; color: #ccc;">Rigorous engineering program combining deep computer science theory with hands-on systems work. Coursework spanned algorithms and data structures, computer architecture, operating systems, networking, databases, software engineering, and artificial intelligence. Advanced study in machine learning, knowledge-based systems, and software requirements analysis — culminating in a capstone project building an AI-driven application from design through delivery.</p>
             </div>
-        </section>
+        </div>
 
-        <section>
+        <div class="card">
             <h2>Skills</h2>
             <div class="skills">
                 <span class="skill">Java</span>
@@ -98,17 +162,18 @@
                 <span class="skill">Docker</span>
                 <span class="skill">Networking</span>
             </div>
-        </section>
+        </div>
 
-        <section>
+        <div class="card">
             <h2>Connect</h2>
             <div class="links">
                 <a href="https://www.linkedin.com/in/owenhennessey/">LinkedIn</a>
+                <a href="https://github.com/Ohenness">GitHub</a>
                 <a href="mailto:owenhennessey212@gmail.com">Email</a>
             </div>
-        </section>
-
-        <footer>&copy; 2026 Owen Hennessey</footer>
+        </div>
     </div>
+
+    <footer>&copy; 2026 Owen Hennessey</footer>
 </body>
 </html>
