@@ -17,6 +17,14 @@
         .skill { background: #f0f7fc; border: 1px solid #d0e5f5; border-radius: 4px; padding: 0.3rem 0.7rem; font-size: 0.9rem; }
         .links a { display: inline-block; margin-right: 1.5rem; color: #0073b1; text-decoration: none; font-weight: 500; }
         .links a:hover { text-decoration: underline; }
+        .experience-item { margin-bottom: 1.5rem; }
+        .experience-item:last-child { margin-bottom: 0; }
+        .experience-header { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; }
+        .experience-title { font-weight: 600; font-size: 1rem; }
+        .experience-date { color: #666; font-size: 0.9rem; }
+        .experience-company { color: #555; font-size: 0.95rem; margin-bottom: 0.4rem; }
+        .experience-item ul { margin-left: 1.2rem; color: #333; }
+        .experience-item li { margin-bottom: 0.3rem; }
         footer { margin-top: 3rem; color: #888; font-size: 0.85rem; }
     </style>
 </head>
@@ -33,16 +41,61 @@
         </section>
 
         <section>
+            <h2>Experience</h2>
+            <div class="experience-item">
+                <div class="experience-header">
+                    <span class="experience-title">Software Development Engineer</span>
+                    <span class="experience-date">June 2024 – Present</span>
+                </div>
+                <div class="experience-company">Amazon Web Services — PrivateLink, VPC Endpoints</div>
+                <ul>
+                    <li>Own end-to-end development of the VPC Endpoints control plane and data plane migration systems spanning 50+ AWS regions</li>
+                    <li>Drove a stalled data plane migration from 84% to 98.1% completion (5M+ ENIs), delivering projected 90% infrastructure cost savings</li>
+                    <li>Reduced AWS service onboarding time from 6 weeks to under 1 week by architecting a self-service platform with reusable CDK constructs and automated canary testing</li>
+                    <li>Enabled 70+ internal AWS service teams to independently onboard with minimal support</li>
+                </ul>
+            </div>
+            <div class="experience-item">
+                <div class="experience-header">
+                    <span class="experience-title">Software Development Engineer Intern</span>
+                    <span class="experience-date">May 2023 – July 2023</span>
+                </div>
+                <div class="experience-company">Amazon Web Services — Lambda, Counting Service</div>
+                <ul>
+                    <li>Designed and built an automated heat management system eliminating 1–2 manual on-call pages per rotation for events exceeding 300K TPS</li>
+                    <li>Implemented a fail-safe orchestration pipeline with automated safety checks ensuring zero availability impact — ~5,700 lines of production code in 12 weeks</li>
+                    <li>Engineered an event-driven solution running every 30 minutes, transforming a reactive manual process into a fully automated system</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Education</h2>
+            <div class="experience-item">
+                <div class="experience-header">
+                    <span class="experience-title">Bachelor of Science in Computer Science and Engineering</span>
+                    <span class="experience-date">2024</span>
+                </div>
+                <div class="experience-company">The Ohio State University — Columbus, Ohio</div>
+                <p style="margin-top: 0.6rem; color: #333;">Rigorous engineering program combining deep computer science theory with hands-on systems work. Coursework spanned algorithms and data structures, computer architecture, operating systems, networking, databases, software engineering, and artificial intelligence. Advanced study in machine learning, knowledge-based systems, and software requirements analysis — culminating in a capstone project building an AI-driven application from design through delivery.</p>
+            </div>
+        </section>
+
+        <section>
             <h2>Skills</h2>
             <div class="skills">
                 <span class="skill">Java</span>
                 <span class="skill">Python</span>
                 <span class="skill">TypeScript</span>
-                <span class="skill">Cloud Computing</span>
+                <span class="skill">Swift</span>
                 <span class="skill">AWS</span>
+                <span class="skill">CDK</span>
                 <span class="skill">Distributed Systems</span>
+                <span class="skill">SwiftUI</span>
+                <span class="skill">iOS Development</span>
                 <span class="skill">CI/CD</span>
-                <span class="skill">Microservices</span>
+                <span class="skill">Infrastructure as Code</span>
+                <span class="skill">Docker</span>
                 <span class="skill">Networking</span>
             </div>
         </section>
