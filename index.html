@@ -169,6 +169,23 @@
             <h2>Projects</h2>
             <div class="experience-item">
                 <div class="experience-header">
+                    <span class="experience-title">FastBook — Limit Order Book & Matching Engine</span>
+                    <span class="experience-date">Java</span>
+                </div>
+                <p style="margin-top: 0.5rem; color: #ccc;">A high-performance limit order book and matching engine built to explore the data structures and latency tradeoffs behind electronic trading systems.</p>
+                <ul>
+                    <li>FIFO price-level matching with partial fills, cancellations, and multi-symbol order routing</li>
+                    <li>Processes 4.6M orders/sec with p50 latency of 125ns on a single thread</li>
+                    <li>TreeMap-based price ordering, HashMap order index, and ArrayDeque FIFO queues with integer tick pricing</li>
+                    <li>Deterministic CSV event replay for reproducible testing of matching correctness</li>
+                    <li>Synthetic benchmark runner reporting throughput and p50/p95/p99 latency percentiles</li>
+                </ul>
+                <div class="links" style="margin-top: 0.75rem;">
+                    <a href="https://github.com/Ohenness/FastBook">View on GitHub</a>
+                </div>
+            </div>
+            <div class="experience-item">
+                <div class="experience-header">
                     <span class="experience-title">Sip — Coffee Shop Journal</span>
                     <span class="experience-date">iOS App · Swift & SwiftUI</span>
                 </div>
